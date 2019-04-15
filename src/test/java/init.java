@@ -11,12 +11,19 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.*;
 
 class initTest
 {
     @Test
     void init()
     {
-        assertTrue(true);
+        Init in0 = new Init();
+        Init in1 = new Init();
+
+        assertAll(
+                ()-> assertEquals(0,in0.id),
+                ()-> assertEquals(0,in1.id)
+        );
     }
 }
