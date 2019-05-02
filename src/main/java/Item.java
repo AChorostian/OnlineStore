@@ -11,7 +11,7 @@ public class Item
 
     private String name;
     public String getName() { return name; }
-    public void setName(Order order) { this.name = name; }
+    public void setName(String name) { this.name = name; }
 
     private Double price;
     public Double getPrice() { return price; }
