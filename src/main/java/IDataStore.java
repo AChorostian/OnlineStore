@@ -5,6 +5,6 @@ public interface IDataStore<T>
     void createItem(T item);
     void updateItem(T user);
     void deleteItem(T user);
-    T getItem(int id);
+    T getItem(Long id);
     List<T> getAllItems();
 }
