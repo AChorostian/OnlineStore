@@ -1,8 +1,14 @@
 import javax.persistence.*;
 
 @Entity
-public class OrderItem
+public class OrderItem implements IDataElement
 {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
     private int quantity;
     public int getQuantity() { return quantity; }
     public void setQuantity(int quantity) { this.quantity = quantity; }

@@ -1,10 +1,9 @@
 import java.util.List;
 
-public interface IDataStore<T>
+public interface IDataStore
 {
-    void createItem(T item);
-    void updateItem(T user);
-    void deleteItem(T user);
-    T getItem(Long id);
-    List<T> getAllItems();
+    void createItem(IDataElement item);
+    void updateItem(IDataElement user);
+    void deleteItem(IDataElement user);
+    List<IDataElement> getAllItems();
 }

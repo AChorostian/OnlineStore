@@ -1,7 +1,7 @@
 import javax.persistence.*;
 
 @Entity
-public class Order
+public class Order implements IDataElement
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
