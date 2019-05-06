@@ -25,7 +25,7 @@ public class OrderService
         dataStore.createItem(newOrder);
     }
 
-    public List<Order> getAllUsers()
+    public List<Order> getAllOrders()
     {
         return dataStore.getAllItems();
     }

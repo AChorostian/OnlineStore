@@ -26,5 +26,5 @@ public class OrderItem implements IDataElement
     public void setOrder(Order order) { this.order = order; }
 
     public Item getItem() { return item; }
-    public void setItem(User user) { this.item = item; }
+    public void setItem(Item item) { this.item = item; }
 }
