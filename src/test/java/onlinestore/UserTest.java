@@ -1,4 +1,4 @@
-package OnlineStore;
+package onlinestore;
 
 import static org.junit.jupiter.api.Assertions.*;
 

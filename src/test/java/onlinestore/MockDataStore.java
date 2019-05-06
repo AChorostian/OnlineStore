@@ -1,7 +1,4 @@
-package OnlineStore;
-
-import OnlineStore.IDataElement;
-import OnlineStore.IDataStore;
+package onlinestore;
 
 import java.util.ArrayList;
 import java.util.List;
