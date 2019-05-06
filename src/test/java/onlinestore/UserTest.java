@@ -7,13 +7,12 @@ import org.junit.jupiter.api.Test;
 
 class UserTest
 {
-    private IDataStore<User> ds;
     private UserService us;
 
     @BeforeEach
-    void setUp()
+    private void setUp()
     {
-        ds = new MockDataStore<>();
+        IDataStore<User> ds = new MockDataStore<>();
         us = new UserService();
         us.setDataStore(ds);
     }
@@ -105,9 +104,9 @@ class UserTest
     void emptyUserDataTest()
     {
         assertAll(
-                ()-> assertThrows(IllegalArgumentException.class, ()-> us.createUser("","Kowalski","j.kowalski@gmail.com") ),
-                ()-> assertThrows(IllegalArgumentException.class, ()-> us.createUser("Jan","","j.kowalski@gmail.com") ),
-                ()-> assertThrows(IllegalArgumentException.class, ()-> us.createUser("Jan","Kowalski","") )
+                () -> assertThrows(IllegalArgumentException.class, () -> us.createUser("", "Kowalski", "j.kowalski@gmail.com")),
+                () -> assertThrows(IllegalArgumentException.class, () -> us.createUser("Jan", "", "j.kowalski@gmail.com")),
+                () -> assertThrows(IllegalArgumentException.class, () -> us.createUser("Jan", "Kowalski", ""))
         );
     }
 
