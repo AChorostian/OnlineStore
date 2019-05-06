@@ -5,7 +5,7 @@ public class UserService
 {
     private IDataStore<User> dataStore;
 
-    public void setDataStoreDataStore(IDataStore<User> dataStore)
+    public void setDataStore(IDataStore<User> dataStore)
     {
         this.dataStore = dataStore;
     }
@@ -16,14 +16,14 @@ public class UserService
             throw new IllegalArgumentException();
         User newUser = new User();
         newUser.setFirstName(firstName);
-        newUser.setLastName(firstName);
+        newUser.setLastName(lastName);
         newUser.setEMail(eMail);
         dataStore.createItem(newUser);
     }
 
     public List<User> getAllUsers()
     {
-        return (List<User>)dataStore.getAllItems();
+        return dataStore.getAllItems();
     }
 
     public void updateUser(User user)
