@@ -1,4 +1,6 @@
-package onlinestore;
+package onlinestore.entity;
+
+import onlinestore.repository.IDataElement;
 
 import javax.persistence.*;
 

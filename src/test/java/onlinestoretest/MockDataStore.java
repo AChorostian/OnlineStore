@@ -1,4 +1,7 @@
-package onlinestore;
+package onlinestoretest;
+
+import onlinestore.repository.IDataElement;
+import onlinestore.repository.IDataStore;
 
 import java.util.ArrayList;
 import java.util.List;

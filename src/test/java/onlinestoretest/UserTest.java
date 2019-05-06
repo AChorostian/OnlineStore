@@ -1,7 +1,10 @@
-package onlinestore;
+package onlinestoretest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import onlinestore.entity.User;
+import onlinestore.repository.IDataStore;
+import onlinestore.service.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

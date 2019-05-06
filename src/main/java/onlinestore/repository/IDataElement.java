@@ -1,4 +1,4 @@
-package onlinestore;
+package onlinestore.repository;
 
 public interface IDataElement
 {

@@ -1,4 +1,7 @@
-package onlinestore;
+package onlinestore.service;
+
+import onlinestore.entity.Item;
+import onlinestore.repository.IDataStore;
 
 import java.util.ArrayList;
 import java.util.List;
