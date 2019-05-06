@@ -73,7 +73,7 @@ public class UserService
         return result;
     }
 
-    boolean wrong(String firstName, String lastName, String eMail)
+    private boolean wrong(String firstName, String lastName, String eMail)
     {
         boolean correct = true;
         if (firstName.length() > 30 || firstName.length() == 0)
