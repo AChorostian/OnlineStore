@@ -34,13 +34,15 @@ public class MockDataStore<T extends IDataElement> implements IDataStore<T>
 
     public void deleteItem(T item)
     {
-        for (IDataElement i : items)
+        int indexToDelete=-1;
+        for (T i : items)
         {
             if (i.getId().equals(item.getId()))
             {
-                items.remove(i);
+                indexToDelete = items.indexOf(i);
             }
         }
+        items.remove(indexToDelete);
     }
 
     public List<T> getAllItems()

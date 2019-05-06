@@ -80,8 +80,14 @@ class UserTest
         assertNotNull(us.getAllUsers().get(0).getId());
     }
 
+    @Test
+    void UserIdChangingTest()
+    {
+        us.createUser("Jan","Kowalski","j.kowalski@gmail.com");
+        us.createUser("Janek","Niewiadomski","j.mhm@gmail.com");
 
-
+        assertNotEquals(us.getAllUsers().get(0).getId(),us.getAllUsers().get(1).getId());
+    }
 
     @Test
     void findUserAndUpdateTest()
@@ -94,19 +100,23 @@ class UserTest
         assertEquals("Janusz",us.findUserByEMail("j.kowalski@gmail.com").get(0).getFirstName());
     }
 
+    @Test
+    void findUserAndDeleteTest()
+    {
+        us.createUser("Jan","Kowalski","j.kowalski@gmail.com");
+        User user = us.findUserByFirstName("Jan").get(0);
+        us.deleteUser(user);
+        assertEquals(0, us.getAllUsers().size());
+    }
 
-//    @Test
-//    void deleteUserTest()
-//    {
-//        us.createUser("Jan","Kowalski","j.kowalski@gmail.com");
-//        assertTrue(us.getAllUsers().size() == 1);
-//    }
-//
-//    @Test
-//    void addTwoUsersTest()
-//    {
-//        us.createUser("Jan","Kowalski","j.kowalski@gmail.com");
-//        us.createUser("Janek","Tomaszewski","j.kowalski@gmail.com");
-//        assertTrue(us.getAllUsers().size() == 2);
-//    }
+    @Test
+    void EmptyUserDataTest()
+    {
+        assertAll(
+                ()-> assertThrows(IllegalArgumentException.class, ()-> us.createUser("","Kowalski","j.kowalski@gmail.com") ),
+                ()-> assertThrows(IllegalArgumentException.class, ()-> us.createUser("Jan","","j.kowalski@gmail.com") ),
+                ()-> assertThrows(IllegalArgumentException.class, ()-> us.createUser("Jan","Kowalski","") )
+        );
+    }
+
 }
