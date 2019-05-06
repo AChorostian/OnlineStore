@@ -64,14 +64,14 @@ class UserTest
     }
 
     @Test
-    void UserIdNotNullTest()
+    void userIdNotNullTest()
     {
         us.createUser("Jan","Kowalski","j.kowalski@gmail.com");
         assertNotNull(us.getAllUsers().get(0).getId());
     }
 
     @Test
-    void UserIdChangingTest()
+    void userIdChangingTest()
     {
         us.createUser("Jan","Kowalski","j.kowalski@gmail.com");
         us.createUser("Janek","Niewiadomski","j.mhm@gmail.com");
@@ -100,7 +100,7 @@ class UserTest
     }
 
     @Test
-    void EmptyUserDataTest()
+    void emptyUserDataTest()
     {
         assertAll(
                 ()-> assertThrows(IllegalArgumentException.class, ()-> us.createUser("","Kowalski","j.kowalski@gmail.com") ),
