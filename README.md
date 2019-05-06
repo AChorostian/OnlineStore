@@ -1,4 +1,4 @@
-# onlinestore
+# OnlineStore
 
 Project for Java testing classes at the University of Gdansk.
 Contains JUnit5 tests with EasyMock and Mockito
