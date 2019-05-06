@@ -1,3 +1,5 @@
+package OnlineStore;
+
 import javax.persistence.*;
 
 @Entity

@@ -1,3 +1,5 @@
+package OnlineStore;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,7 +51,7 @@ public class UserService
         return result;
     }
 
-    List<User> findUserByLastName(String lastName)
+    public List<User> findUserByLastName(String lastName)
     {
         List<User> result = new ArrayList<>();
         for(User user : dataStore.getAllItems())
@@ -60,7 +62,7 @@ public class UserService
         return result;
     }
 
-    List<User> findUserByEMail(String eMail)
+    public List<User> findUserByEMail(String eMail)
     {
         List<User> result = new ArrayList<>();
         for(User user : dataStore.getAllItems())

@@ -1,3 +1,5 @@
+package OnlineStore;
+
 public interface IDataElement
 {
     Long getId();

@@ -30,7 +30,7 @@ Dane do bazy mają być przechowywane w jakimś systemie bazodanowym. Zaimplemen
   * (1 pkt) Użycie różnych rodzaji atrap.
   * (1 pkt) Styl kodu.
 
-#### Dodatki:
+#### Dodatki
 
   * (2 pkt) Inne technologie dotyczące atrap, nie pokazywane na zajęciach (co najmniej po 5 testów każda z nich).
   * (1 pkt) Użycie GitFlow

@@ -1,3 +1,5 @@
+package OnlineStore;
+
 import java.util.List;
 
 public interface IDataStore<T extends IDataElement>
