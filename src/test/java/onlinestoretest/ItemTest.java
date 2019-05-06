@@ -13,7 +13,7 @@ public class ItemTest
     private ItemService is;
 
     @BeforeEach
-    private void setUp()
+    void setUp()
     {
         IDataStore<Item> ds = new MockDataStore<>();
         is = new ItemService();

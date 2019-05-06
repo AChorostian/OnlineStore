@@ -13,7 +13,7 @@ class UserTest
     private UserService us;
 
     @BeforeEach
-    private void setUp()
+    void setUp()
     {
         IDataStore<User> ds = new MockDataStore<>();
         us = new UserService();
