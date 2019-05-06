@@ -14,7 +14,7 @@ public class UserService
 
     public void createUser(String firstName, String lastName, String eMail)
     {
-        if (!validate(firstName,lastName,eMail))
+        if (wrong(firstName,lastName,eMail))
             throw new IllegalArgumentException();
         User newUser = new User();
         newUser.setFirstName(firstName);
@@ -30,7 +30,7 @@ public class UserService
 
     public void updateUser(User user)
     {
-        if (!validate(user.getFirstName(),user.getLastName(),user.getEMail()))
+        if (wrong(user.getFirstName(),user.getLastName(),user.getEMail()))
             throw new IllegalArgumentException();
         dataStore.updateItem(user);
     }
@@ -40,7 +40,7 @@ public class UserService
         dataStore.deleteItem(user);
     }
 
-    List<User> findUserByFirstName(String firstName)
+    public List<User> findUserByFirstName(String firstName)
     {
         List<User> result = new ArrayList<>();
         for(User user : dataStore.getAllItems())
@@ -73,7 +73,7 @@ public class UserService
         return result;
     }
 
-    private boolean validate(String firstName, String lastName, String eMail)
+    boolean wrong(String firstName, String lastName, String eMail)
     {
         boolean correct = true;
         if (firstName.length() > 30 || firstName.length() == 0)
@@ -88,6 +88,6 @@ public class UserService
             correct = false;
         if (!eMail.matches("^[a-zA-Z0-9_]+[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]*@[a-zA-Z0-9.-]+[.][a-zA-Z0-9]+$"))
             correct = false;
-        return correct;
+        return !correct;
     }
 }
