@@ -4,10 +4,11 @@ Project for Java testing classes at the University of Gdansk.
 Contains JUnit5 tests with EasyMock and Mockito
 Created by GitHub Classroom. Managed by GitFlow.
 
-#### Travis & Codacy
+#### Badges
 
 [![Build Status](https://travis-ci.com/testowanieaplikacjijavaug/projekt2-AChorostian.svg?token=FsWgJEToSjz6xeFyedzi&branch=master)](https://travis-ci.com/testowanieaplikacjijavaug/projekt2-AChorostian)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9932b0d3c5c04716821142681e0958e7)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=testowanieaplikacjijavaug/projekt2-AChorostian&amp;utm_campaign=Badge_Grade)
+[![Coverage Status](https://coveralls.io/repos/github/AChorostian/projekt2-AChorostian/badge.svg?branch=master)](https://coveralls.io/github/AChorostian/projekt2-AChorostian?branch=master)
 
 #### Subject (in Polish)
 
