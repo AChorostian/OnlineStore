@@ -52,7 +52,7 @@ public class ItemService
         return result;
     }
 
-    public List<Item> findItemByDouble(Double price)
+    public List<Item> findItemByPrice(Double price)
     {
         List<Item> result = new ArrayList<>();
         for(Item item : dataStore.getAllItems())
