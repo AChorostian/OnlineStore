@@ -1,8 +1,8 @@
 # OnlineStore
 
 Project for Java testing classes at the University of Gdansk.
-Contains JUnit5 tests with EasyMock and Mockito
-Created by GitHub Classroom. Managed by GitFlow.
+Contains JUnit5 tests with manual created mocks
+Created by GitHub Classroom. Managed using GitFlow.
 
 #### Badges
 
